@@ -22,7 +22,7 @@ def list_books_for_humans():
     ]
     return render_template("books.html", message="Here's some books", books=books)
 
-'''
+
 @book_routes.route("/books/new")
 def new_book():
     return render_template("new_book.html")
@@ -37,4 +37,3 @@ def create_book():
     })
     #flash(f"Book '{new_book.title}' created successfully!", "success")
     #return redirect(f"/books")
-    '''

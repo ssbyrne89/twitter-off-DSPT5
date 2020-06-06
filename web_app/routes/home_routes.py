@@ -12,5 +12,5 @@ def index():
 
 @home_routes.route("/about")
 def about():
-    print("Visiting the home page")
+    print("Visiting the about page")
     return "About me"
