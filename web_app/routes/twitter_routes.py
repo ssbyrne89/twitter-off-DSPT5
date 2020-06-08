@@ -33,11 +33,11 @@ def get_user(screen_name=None):
     embeddings = list(basilica_api_client.embed_sentences(all_tweet_texts, model="twitter"))
     print("NUMBER OF EMBEDDINGS", len(embeddings))
 
-    # TODO: explore using the zip() function maybe...
+    # #TODO: explore using the zip() function maybe...
     counter = 0
     for status in statuses:
-        print(status.full_text)
-        print("----")
+        #print(status.full_text)
+        #print("----")
         # get existing tweet from the db or initialize a new one:
         db_tweet = Tweet.query.get(status.id) or Tweet(id=status.id)
         db_tweet.user_id = status.author.id # or db_user.id
@@ -48,5 +48,5 @@ def get_user(screen_name=None):
         db.session.add(db_tweet)
         counter+=1
     db.session.commit()
-    return "OK"
-    #return render_template("user.html", user=db_user, tweets=statuses) # tweets=db_tweets
+    #return "OK"
+    return render_template("user.html", user=db_user, tweets=statuses) # tweets=db_tweets
