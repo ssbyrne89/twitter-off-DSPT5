@@ -12,7 +12,7 @@ BASILICA_API_KEY = os.getenv("BASILICA_API_KEY")
 connection = basilica.Connection(BASILICA_API_KEY)
 print(type(connection))#<basilica.Connection object at 0x000002AAACDB3FC8>
 
-if if __name__ == "__main__":
+if __name__ == "__main__":
     
     sentences = ["Hello world!", "How are you?"]
     embeddings = connection.embed_sentences(sentences)
