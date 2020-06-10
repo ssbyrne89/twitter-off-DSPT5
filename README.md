@@ -32,6 +32,7 @@ FLASK_APP=web_app flask db upgrade
 #Usage
 
 '''sh
-FLASK_APP=web_app flask run
+export FLASK_APP=web_app
+flask run
 '''
 

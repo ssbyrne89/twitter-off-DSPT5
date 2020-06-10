@@ -30,9 +30,7 @@ def load_model():
 
 if __name__ == "__main__":
 
-    train_and_save_model()
-
-    exit()
+    #train_and_save_model()
 
     clf = load_model()
     print("CLASSIFIER:", clf)
